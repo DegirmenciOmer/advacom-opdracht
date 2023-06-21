@@ -1,0 +1,8 @@
+<svg id="icon_ZOEK" data-name="icon ZOEK" xmlns="http://www.w3.org/2000/svg" width="22.561" height="22.561" viewBox="0 0 22.561 22.561">
+  <g id="Ellipse_8" data-name="Ellipse 8" fill="none" stroke="#002855" stroke-width="3">
+    <circle cx="10" cy="10" r="10" stroke="none"/>
+    <circle cx="10" cy="10" r="8.5" fill="none"/>
+  </g>
+  <circle id="Ellipse_9" data-name="Ellipse 9" cx="5" cy="5" r="5" transform="translate(5 5)" fill="none"/>
+  <line id="Line_1" data-name="Line 1" x2="6" y2="6" transform="translate(15.5 15.5)" fill="none" stroke="#002855" stroke-width="3"/>
+</svg>

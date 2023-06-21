@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="22" viewBox="0 0 20 22">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_6" data-name="Rectangle 6" width="20" height="22" transform="translate(1000 58)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="icon_MIJN_LS" data-name="icon MIJN LS" transform="translate(-1000 -58)" clip-path="url(#clip-path)">
+    <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(1000 70)" fill="none" stroke="#002855" stroke-width="3">
+      <circle cx="10" cy="10" r="10" stroke="none"/>
+      <circle cx="10" cy="10" r="8.5" fill="none"/>
+    </g>
+    <g id="Ellipse_6" data-name="Ellipse 6" transform="translate(1005 75)" fill="none" stroke="#002855" stroke-width="3">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="3.5" fill="none"/>
+    </g>
+    <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(1005 58)" fill="none" stroke="#002855" stroke-width="3">
+      <circle cx="5" cy="5" r="5" stroke="none"/>
+      <circle cx="5" cy="5" r="3.5" fill="none"/>
+    </g>
+  </g>
+</svg>
