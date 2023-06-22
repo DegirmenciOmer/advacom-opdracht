@@ -17,15 +17,14 @@ $('#hamburger-icon').on('click', () => {
 
 // Hamburger menu > over-ons accordion toggle
 $('.accordion-header').on('click', function () {
-  var accordionContent = $(this).next('.accordion-content')
-  var accordionIcon = $(this).find('.accordion-icon')
+  const accordionContent = $(this).next('.accordion-content')
+  const accordionIcon = $(this).find('.accordion-icon')
 
   accordionContent.slideToggle('fast')
   accordionIcon.toggleClass('active')
 })
 
 // Toggle search box
-
 $('#search-button').on('click', () => {
   $('#search-box').toggleClass('open')
 })
@@ -54,33 +53,27 @@ $('.carousel__slide__container__footer .next-button').on('click', () => {
   const currentSlide = $('#carousel .current-slide')
   const nextSlide = currentSlide.next()
 
-  console.log(currentSlide)
-
-  if (nextSlide.length === 0) {
+  moveToSlide(track, currentSlide, nextSlide)
+  if (nextSlide.next().length === 0) {
     // No next slide, disable the next button
     $('.carousel__slide__container__footer .next-button').prop('disabled', true)
-  } else {
-    // Move to the next slide
-    moveToSlide(track, currentSlide, nextSlide)
     $('.carousel__slide__container__footer .prev-button').prop(
       'disabled',
       false
-    ) // Enable the prev button
+    )
   }
 })
 
 $('.carousel__slide__container__footer .prev-button').on('click', () => {
   const currentSlide = $('#carousel .current-slide')
   const prevSlide = currentSlide.prev()
-  if (prevSlide.length === 0) {
+  moveToSlide(track, currentSlide, prevSlide)
+  if (prevSlide.prev().length === 0) {
     // No prev slide, disable the prev button
     $('.carousel__slide__container__footer .prev-button').prop('disabled', true)
-  } else {
-    // Move to the prev slide
-    moveToSlide(track, currentSlide, prevSlide)
     $('.carousel__slide__container__footer .next-button').prop(
       'disabled',
       false
-    ) // Enable the nex button
+    )
   }
 })
