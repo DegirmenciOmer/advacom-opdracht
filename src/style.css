@@ -23,6 +23,10 @@ br {
 
 /* Header styles */
 
+header {
+  height: 100%;
+}
+
 nav li {
   list-style: none;
 }
@@ -53,6 +57,7 @@ nav a {
   justify-content: space-between;
   padding: 0 10px;
   margin: auto;
+  height: 11%;
 }
 
 .wide-menu nav {
@@ -201,7 +206,7 @@ nav a {
   margin: 0;
   list-style: none;
   position: relative;
-  height: 100%;
+  height: 89%;
   transition: transform 300ms ease-in;
 }
 
@@ -214,7 +219,7 @@ nav a {
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 92%;
+  height: 90%;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -224,19 +229,24 @@ nav a {
 }
 
 .carousel__slide__container {
-  height: 60%;
   display: flex;
   max-width: var(--max-width-pc);
   width: 100%;
-  justify-content: space-around;
   flex-direction: column;
   margin: auto auto 0px;
   padding: 0 10px;
   z-index: 10;
 }
 
+.carousel__slide__crescent-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+}
+
 .carousel__slide__crescent {
-  height: 430px;
+  height: 65%;
   background-image: url('../images/slider-overlay.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -245,14 +255,14 @@ nav a {
 
 .carousel__slide__bottom-stripe {
   width: 100%;
-  height: 330px;
+  height: 55%;
   background-color: var(--color-yellow);
 }
 
 .carousel__slide__circle-overlay {
   position: absolute;
-  bottom: 200px;
-  left: 700px;
+  bottom: 20%;
+  left: 38%;
   width: 80%;
   height: 80%;
   background-image: url('../images/slider-overlay-circle.svg');
@@ -260,13 +270,6 @@ nav a {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 44;
-}
-
-.carousel__slide__crescent-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 700px;
 }
 
 .carousel__slide__container h1 {
@@ -282,7 +285,7 @@ nav a {
 }
 
 .carousel__slide__container p {
-  font-size: large;
+  font-size: 20;
   font-weight: bold;
   color: var(--color-white);
 }
@@ -292,7 +295,7 @@ nav a {
 }
 
 .carousel__slide__container a {
-  font-size: large;
+  font-size: 20;
   font-weight: bold;
   color: var(--color-red);
   text-decoration: none;
@@ -301,14 +304,19 @@ nav a {
 .carousel__slide__container__footer {
   display: flex;
   justify-content: space-between;
-  margin: 20px 30px 0 0;
+  margin: 60px 30px 0 0;
 }
 
 .carousel__slide__container__footer button {
   cursor: pointer;
   border-radius: 50%;
-  padding: 5px;
+  padding: 7px;
   border: none;
+  margin: 0 5px;
+}
+
+.current-slide {
+  z-index: 48;
 }
 
 /* Responsive styles */
@@ -329,12 +337,12 @@ nav a {
   }
 
   .carousel__slide {
-    height: 84%;
+    height: 60%;
   }
 
   .carousel__slide__container {
-    width: 100%;
-    height: 20%;
+    transform: translateY(46%);
+    font-size: larger;
   }
 
   .carousel__slide__container h1 {
@@ -342,27 +350,30 @@ nav a {
     line-height: 90px;
   }
 
-  .carousel__slide__crescent {
-    height: 150px;
+  .carousel__slide__container__body {
+    max-width: 700px;
+    margin-top: 70px;
+  }
+
+  .carousel__slide__container__footer {
+    margin-top: 120px;
   }
 
   .carousel__slide__crescent-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 150px;
+    height: 30%;
   }
 
-  .carousel__slide__circle-overlay {
-    bottom: 100px;
-    width: 70%;
-    height: 70%;
+  .carousel__slide__crescent {
+    height: 80%;
   }
 
   .carousel__slide__bottom-stripe {
-    width: 100%;
-    height: 250px;
-    background-color: var(--color-yellow);
+    height: 300%;
+  }
+
+  .carousel__slide__circle-overlay {
+    left: 50%;
+    bottom: 10%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -378,6 +389,7 @@ nav a {
     flex-direction: column;
     padding: 15px 10px;
     z-index: 5;
+    height: 9%;
   }
 
   .search-box {
@@ -472,77 +484,86 @@ nav a {
     transform: rotate(180deg);
   }
 
+  .carousel {
+    height: 91%;
+  }
+
   .carousel__slide {
-    height: 60%;
+    height: 55%;
   }
 
   .carousel__slide__container {
-    width: 100%;
-    height: 0%;
+    transform: translateY(56%);
   }
 
   .carousel__slide__container h1 {
-    font-size: 11vw;
-    line-height: 80px;
+    font-size: 10vw;
+    line-height: 11vw;
+  }
+
+  .carousel__slide__container__body {
+    max-width: 400px;
   }
 
   .carousel__slide__crescent {
-    height: 120px;
-  }
-
-  .carousel__slide__crescent-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 120px;
+    height: 70%;
   }
 
   .carousel__slide__circle-overlay {
-    left: 400;
-    width: 60%;
-  }
-
-  .carousel__slide__bottom-stripe {
-    width: 100%;
-    height: 330px;
-    background-color: var(--color-yellow);
+    left: 60%;
+    bottom: 4%;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .hamburger-menu {
+    height: 12%;
+  }
+
+  .logo img {
+    width: 170px;
+    margin-bottom: 0;
+  }
+
   .carousel__slide {
-    height: 506;
+    height: 45%;
   }
 
   .carousel__slide__crescent-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 300px;
+    height: 40%;
   }
 
-  .carousel__slide__circle-overlay {
-    left: 300;
-    width: 60%;
+  .carousel__slide__crescent {
+    height: 55%;
   }
 
   .carousel__slide__bottom-stripe {
-    width: 100%;
-    height: 430px;
-    background-color: var(--color-yellow);
+    height: 350%;
+  }
+
+  .carousel__slide__circle-overlay {
+    left: 60%;
+    bottom: 4%;
   }
 
   .carousel__slide__container {
-    height: 60%;
+    transform: translateY(57%);
   }
 
-  .carousel__slide__container__footer {
-    margin-top: 50px;
+  .carousel__slide__container a {
+    font-size: 16;
   }
 
   .carousel__slide__container h1 {
-    font-size: 60;
-    font-family: var(--righteous);
-    line-height: 80px;
+    font-size: 13vw;
+    line-height: 13vw;
+  }
+
+  .carousel__slide__container__body {
+    margin-top: 40px;
+  }
+
+  .carousel__slide__container__footer {
+    margin-top: 40px;
   }
 }
