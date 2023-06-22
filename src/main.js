@@ -1,3 +1,8 @@
+// ____________________________________________
+//
+// Hamburger menu
+// ____________________________________________
+
 // Toggle hamburger menu
 $('#hamburger-icon').on('click', () => {
   $('#nav-container').slideToggle('fast', function () {
@@ -24,7 +29,11 @@ $('.accordion-header').on('click', function () {
   accordionIcon.toggleClass('active')
 })
 
+// ____________________________________________
+//
 // Toggle search box
+// ____________________________________________
+
 $('#search-button').on('click', () => {
   $('#search-box').toggleClass('open')
 })
@@ -33,9 +42,15 @@ $('#hamburger-search-button').on('click', () => {
   $('#search-box').toggleClass('open')
 })
 
+// ____________________________________________
+//
 // Carousel
+// ____________________________________________
+
 const track = $('#carousel')
 const slides = Array.from(track.children())
+const nextButton = $('.carousel__slide__container__footer .next-button')
+const prevButton = $('.carousel__slide__container__footer .prev-button')
 
 // Set slide position
 slides.forEach((slide, index) => {
@@ -49,31 +64,25 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
   targetSlide.addClass('current-slide')
 }
 
-$('.carousel__slide__container__footer .next-button').on('click', () => {
+nextButton.on('click', () => {
   const currentSlide = $('#carousel .current-slide')
   const nextSlide = currentSlide.next()
 
   moveToSlide(track, currentSlide, nextSlide)
   if (nextSlide.next().length === 0) {
     // No next slide, disable the next button
-    $('.carousel__slide__container__footer .next-button').prop('disabled', true)
-    $('.carousel__slide__container__footer .prev-button').prop(
-      'disabled',
-      false
-    )
+    nextButton.prop('disabled', true)
+    prevButton.prop('disabled', false)
   }
 })
 
-$('.carousel__slide__container__footer .prev-button').on('click', () => {
+prevButton.on('click', () => {
   const currentSlide = $('#carousel .current-slide')
   const prevSlide = currentSlide.prev()
   moveToSlide(track, currentSlide, prevSlide)
   if (prevSlide.prev().length === 0) {
     // No prev slide, disable the prev button
-    $('.carousel__slide__container__footer .prev-button').prop('disabled', true)
-    $('.carousel__slide__container__footer .next-button').prop(
-      'disabled',
-      false
-    )
+    prevButton.prop('disabled', true)
+    nextButton.prop('disabled', false)
   }
 })
