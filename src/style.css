@@ -21,7 +21,9 @@ br {
   padding: 0;
 }
 
-/* Header styles */
+/* 
+Navigation menu styles  
+========================================================================== */
 
 nav li {
   list-style: none;
@@ -37,14 +39,10 @@ nav a {
   display: none;
 }
 
-/* Logo styles */
-
 .logo img {
   width: 300px;
   margin: auto 0 10px;
 }
-
-/* Navigation menu styles */
 
 .menu-container {
   display: flex;
@@ -146,7 +144,10 @@ nav a {
   color: var(--color-red);
 }
 
-/* Search box styles */
+/* 
+Search box styles 
+========================================================================== */
+
 .search-box {
   opacity: 0;
   transform: translateY(-100vw);
@@ -196,7 +197,9 @@ nav a {
   width: 23px;
 }
 
-/* Carousel */
+/* Carousel 
+========================================================================== */
+
 .carousel {
   padding: 0;
   margin: 0;
@@ -317,7 +320,9 @@ nav a {
   z-index: 48;
 }
 
-/* Responsive styles */
+/* 
+Responsive styles
+========================================================================== */
 
 @media screen and (max-width: 1024px) {
   .logo img {
@@ -376,7 +381,9 @@ nav a {
     display: none;
   }
 
-  /* hamburger menu */
+  /* 
+  hamburger menu
+  ========================================================================== */
   .hamburger-menu {
     display: flex;
     align-items: center;
@@ -447,7 +454,9 @@ nav a {
     margin-top: 2px;
     background-color: var(--color-yellow);
   }
-  /* Accordion */
+  /* 
+  Accordion 
+  ==========================================================================*/
   .accordion {
     position: relative;
   }
