@@ -49,8 +49,8 @@ $('#hamburger-search-button').on('click', () => {
 
 const track = $('#carousel')
 const slides = Array.from(track.children())
-const nextButton = $('.carousel__slide__container__footer .next-button')
-const prevButton = $('.carousel__slide__container__footer .prev-button')
+const nextButton = $('.carousel__slide__footer .next-button')
+const prevButton = $('.carousel__slide__footer .prev-button')
 
 // Set slide position
 slides.forEach((slide, index) => {
