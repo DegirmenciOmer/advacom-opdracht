@@ -23,10 +23,6 @@ br {
 
 /* Header styles */
 
-header {
-  height: 100%;
-}
-
 nav li {
   list-style: none;
 }
@@ -57,7 +53,6 @@ nav a {
   justify-content: space-between;
   padding: 0 10px;
   margin: auto;
-  height: 11%;
 }
 
 .wide-menu nav {
@@ -169,6 +164,7 @@ nav a {
 .search-box.open {
   opacity: 1;
   transform: translateY(64px);
+  z-index: 60;
 }
 
 .search-box .input-container {
@@ -206,12 +202,13 @@ nav a {
   margin: 0;
   list-style: none;
   position: relative;
-  height: 89%;
+  height: 80%;
   transition: transform 300ms ease-in;
 }
 
 .carousel-section {
-  overflow: hidden;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .carousel__slide {
@@ -235,6 +232,7 @@ nav a {
   flex-direction: column;
   margin: auto auto 0px;
   padding: 0 10px;
+  transform: translateY(90px);
   z-index: 10;
 }
 
@@ -246,7 +244,7 @@ nav a {
 }
 
 .carousel__slide__crescent {
-  height: 65%;
+  height: 70%;
   background-image: url('../images/slider-overlay.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -255,7 +253,7 @@ nav a {
 
 .carousel__slide__bottom-stripe {
   width: 100%;
-  height: 55%;
+  height: 75%;
   background-color: var(--color-yellow);
 }
 
@@ -332,10 +330,6 @@ nav a {
     font-weight: 800;
   }
 
-  .search-box.open {
-    transform: translateY(65px);
-  }
-
   .carousel__slide {
     height: 60%;
   }
@@ -389,7 +383,6 @@ nav a {
     flex-direction: column;
     padding: 15px 10px;
     z-index: 5;
-    height: 9%;
   }
 
   .search-box {
