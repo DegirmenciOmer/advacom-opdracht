@@ -507,6 +507,11 @@ Responsive styles
     height: 12%;
   }
 
+  .carousel__slide__upper h1 {
+    font-size: calc(13px + 5vh);
+    line-height: calc(13px + 5vh);
+  }
+
   .logo img {
     width: 170px;
     margin-bottom: 0;
